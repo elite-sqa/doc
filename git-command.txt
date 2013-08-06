@@ -1,0 +1,38 @@
+git config --global user.name "elite-sqa"
+git config --global user.email elite.sqa@gmail.com
+
+mkdir project
+cd project
+//TODO: create files for project
+git init <directory>//create git control for current folder
+git add . or <file> //staging all files in project folder to add
+git rm <file> //staging file to delete
+git status -s //status of files
+git rm --cached <file> //to unstage added files
+git reset HEAD <file> //to unstage all
+git commit -m "first commit"
+git commit -a -m "shortcut" //add & commit
+git branch -m master <new name> //change branch name only after first commit
+git checkout <files> or <commit id>
+git checkout master //check out the last commit
+git log --oneline //commit history
+git remote add origin git@github.com:elite-sqa/project.git
+//origin already exist
+git remote remove origin
+git remote add origin git@github.com:elite-sqa/project.git
+git push -u origin project
+git remote -v //list remote name and repo
+
+git config --list //show all config
+git diff //view differences
+git diff --cached //differences in staging
+
+ssh-keygen -t rsa -C "your_email@example.com"
+ssh -T git@github.com
+
+//Create another branch and push to GIT HUB
+git branch -m mirror dup //change local branch from "mirror to "dup"
+git push qa dup //qa is remote repo name (logical name) created by "git remote add" , dup is current local repo branch name
+
+//configure git push to only push your current branch
+git config --global push.default current

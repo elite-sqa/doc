@@ -1,0 +1,20 @@
+C:\Users\Quang Do\Downloads\Selenium\apache-ant-1.9.2-bin\apache-ant-1.9.2
+C:\Users\Quang Do\Downloads\Selenium\apache-maven-3.1.0
+C:\Program Files (x86)\Git\bin\git.exe
+C:\Program Files\Java\jdk1.7.0_25
+
+git@github.com:elite-sqa/project.git
+branch: project
+
+set JENKIN_HOME = C:\Users\Quang Do\Jenkins
+set HOME = C:\Users\Quang Do\Jenkins
+
+copy .ssh to %HOME% and %JENKIN_HOME%
+
+*****Jenkins BAT file*****
+cd C:\Users\Quang Do\Downloads\Selenium //Jenkins.war files in this folder
+java -jar Jenkins.war --httpPort=8888
+
+//Install Git Plugin and TestNG plugin
+//path file is in ANT style /
+//Jenkins cannot push if there is no first push/add repo into Github
